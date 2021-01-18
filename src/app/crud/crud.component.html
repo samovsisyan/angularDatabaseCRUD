@@ -1,0 +1,27 @@
+<p>crud works!</p>
+<div *ngFor="let user of users; let i = index">
+  <p> UserName --- {{user.firstname}}</p>
+  <p> UserAge --- {{user.age}}</p>
+</div>
+
+
+<form [formGroup]="peopleForm" (ngSubmit)="handleChange()">
+  <div>
+    <lable>Id</lable>
+    <input type="text" formControlName="id">
+
+    <lable>First Name</lable>
+    <input type="text" formControlName="first_name">
+
+    <lable>Last Name</lable>
+    <input type="text" formControlName="last_name">
+
+    <lable>Age</lable>
+    <input type="text" formControlName="age">
+
+    <lable>Email</lable>
+    <input type="text" formControlName="email">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
